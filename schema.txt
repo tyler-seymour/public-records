@@ -1,0 +1,517 @@
+From 1583455042900786105-0859da02-7c1d-49f7-b88c-c558fa9b2166.mbox@xxx Wed Nov 08 12:20:05 2017
+Delivered-To: shanthi.gonzales@ousd.org
+Received: by 10.31.110.79 with SMTP id j76csp4462521vkc;
+        Tue, 7 Nov 2017 16:20:05 -0800 (PST)
+X-Received: by 10.157.58.8 with SMTP id j8mr321674otc.342.1510100405492;
+        Tue, 07 Nov 2017 16:20:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1510100405; cv=none;
+        d=google.com; s=arc-20160816;
+        b=gw9e0MbeXKXYUncprvq7xjGsG76m35CTyT4IZEmAaJLxRwR0tHSrhatWp0ziwGEeA9
+         Otrfa+4FrlXlcEUMwdZXES/2MMYeWIVdeV+WLYKO3DX33YzrruY268aAKT62pnccfsoZ
+         aI0SO8l4znqUJlklt0dWUFbUHo6U/eBYmnAGeT5gyCLcg87L7ephMRp9XUlLqSUUMkHK
+         PwmsyUmFO9aNFwVRtQ8Ob91y1Twz5Qj5q9AhIziRlE4Fhau0F0rOC1N57jY16yvh3xhq
+         ppfmZC5Gh28iNygEuvwNuTdwvCEaEBqkLH9aMEGASqZtblVZKIBtlvhe/0TraIMPaL2e
+         VIMg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature
+         :arc-authentication-results;
+        bh=eQDQideJqF7ED4fFgxWLFM2G8WW4HSOepdjGT2zrs0I=;
+        b=s/TwrhZdb7aAjtPma/Ke1d2JHeAuEr/9vF43AYyK/RrvepauMopKAFkTYuWWL7HREp
+         YO9Tbmr84EVbSho0ep7vnmVpXUjN3Gqb8Ku3piwihnHjO+CcwGRcUdkEeBhZR43BvCYB
+         Dgdi0V69vTp3z7CiX/P0EjENyBYTyPizgzSCTlkjg+CSiF8OP3Vjfu/29f1HynwXPdk2
+         sQRRcH2F6hzJPyesukrenqF4DwOb8AJdGMjtEek0JKQpS6kEcS9uf7Q29jdbPXJfHq/O
+         rSPkfUJjYH7sBE0HtxUXfkK6V5l5XWVvKvHCmIcdo1N0XqRc9y5lAPB7j9O4WwZJu1em
+         K25g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gopublicschools-org.20150623.gappssmtp.com header.s=20150623 header.b=0GbeVYm9;
+       spf=pass (google.com: domain of ntahai@gopublicschools.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=ntahai@gopublicschools.org
+Return-Path: <ntahai@gopublicschools.org>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j7sor747303otd.30.2017.11.07.16.20.05
+        for <shanthi.gonzales@ousd.org>
+        (Google Transport Security);
+        Tue, 07 Nov 2017 16:20:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of ntahai@gopublicschools.org designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gopublicschools-org.20150623.gappssmtp.com header.s=20150623 header.b=0GbeVYm9;
+       spf=pass (google.com: domain of ntahai@gopublicschools.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=ntahai@gopublicschools.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gopublicschools-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=eQDQideJqF7ED4fFgxWLFM2G8WW4HSOepdjGT2zrs0I=;
+        b=0GbeVYm9AXJlBsmNWRu2FvbVxiZg80mPvdmpq22SVoQpNYnOtEtEn8dXWT9nPL4V50
+         qZ7m2vQABO0+cgNTbxPUY62exUtkqNP1z+8sVqpiuclqvbYfeNZMmbbRy+lLb5UtDVUJ
+         qWoLS7e+zFVND/9fQFKrFIKs8RJY7pzS0gjOgA01Y9ZSnNSBRPvDbJYVz/oQJbEDmZ7G
+         7LZToyKxmV9rT7ejhNPqRUBFLg4P+r2dMy/7F0s1adu/kA3Yvp8hxl5fISZFnzJvBa6Z
+         5M5G1LgOjwyx3MkyZ0XcGkvDffWHXrSpz4Lq/r8KlKDoxiL8w+/1qQO9Qluswqc6vPa9
+         XTxQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=eQDQideJqF7ED4fFgxWLFM2G8WW4HSOepdjGT2zrs0I=;
+        b=jliFkb7iv+ZthdbLDrqfM46E0tKpOcl90j6k8woAPqlONDR/R761aROh9jBuZAVPlH
+         2cnQnyEirKy0ze2gfT1GuOrmZPzdgQRTwt92/7OEoflicnEVXrmQOg79KW7W2R/dpkfR
+         oAaY1IYlRNbfAJzHsCPDc9twiIiZ5gRnm4yYhPcSUGuCK9ZFSvrvjLEoa+Iea2ROm3A0
+         pLDXpXwZ3l7cWHAvXEp1SrgrxU1cTlX+ctpNLJF/0c0uegNEnzgSeo/0SBhIaJoYHUtH
+         ciwRHKxu+HWxBr+zpVwjpMhqt0gUaQ/lxAOkqfW/C6/qq6meBBVAyAh705B3bLmVxDKf
+         coFg==
+X-Gm-Message-State: AJaThX7boJ6j6LRXu4iuFaSsROU3ZyzoBv3Z33l42dCjAl/MInkhV+3A
+	k9KcdfB7OsTrS+hDKiab0ngng0P8PmJL+LNeh2z0hw==
+X-Google-Smtp-Source: AGs4zMat1XvP8SKrvda8Nvk41lf4Ie9Q+fCSb8KXrUqEyCClNHLVXLeYohADsihxT0JmOpsoOc6IjY6vm0TRVNXc5cc=
+X-Received: by 10.157.78.7 with SMTP id p7mr312308otf.137.1510100404883; Tue,
+ 07 Nov 2017 16:20:04 -0800 (PST)
+Received: from 907372061162 named unknown by gmailapi.google.com with
+ HTTPREST; Tue, 7 Nov 2017 16:20:03 -0800
+MIME-Version: 1.0
+From: Nima Tahai <ntahai@gopublicschools.org>
+Date: Tue, 7 Nov 2017 16:20:03 -0800
+Message-ID: <CA+wPHj=pb7quBLDzo59srQiDqvmTsKiNPKTxL6ddoTDqz=-x=Q@mail.gmail.com>
+Subject: GFOA Chicago 2017 - Notes and next steps
+To: Leroy Gaines <leroy.gaines@ousd.org>
+Cc: Matin Abdel-qawi <matin.abdel-qawi@ousd.org>, Linda Wu <linda.wu@ousd.org>,
+	Sondra Aguilera <sondra.aguilera@ousd.org>, Marc Tafolla <marc@gopublicschools.org>,
+	Aimee Eng <aimee.eng@ousd.org>, shanthi.gonzales@ousd.org
+Content-Type: multipart/alternative; boundary="089e082d2ce4356e1d055d6da644"
+
+--089e082d2ce4356e1d055d6da644
+Content-Type: text/plain; charset="UTF-8"
+
+Hi Team Oakland GFOA,
+
+I hope that everyone has had a great start to your week and that this
+e-mail finds you all doing well.  I wanted to send out a follow-up e-mail
+from our time together at GFOA last week - and to echo all of the
+appreciations that were shared Friday afternoon.  While we have work ahead
+to do - it gives me great confidence that this team shared a powerful
+experience last week that will help make Oakland a better district.  In
+three years when we win an award from GFOA for our work in finance, this
+team can fondly reflect back on the first week of November 2017 and know
+that we all did our part to help make that happen.  :)
+
+*Whole Group Next steps:*
+
+   - Below you will find a link to a folder that Leroy created for us
+   during the conference.  This includes notes from sessions - and an Oakland
+   folder that included our first day whip around on why we are here and our
+   last day debrief with next steps.
+   - Be on the look out for an invite from Shanthi for a day in early
+   January for this group to get back together to share out what we have
+   accomplished since November and to make our next round of commitments for
+   next steps to adopt the GFOA framework
+
+*Individual Next Steps (from our debrief on Friday 11/3):*
+
+Board:
+
+   -
+
+   pass the balanced budget policy; long-term planning policies, set work
+   plan for the spring,
+   -
+
+   educate board and get board buy in
+   -
+
+   passing resolution to make sure strategic process is coupled with
+   -
+
+   support budget analysts position funded and build buy in.
+
+
+Academic:
+
+Principals:
+
+   -
+
+   Matin, Leroy, and nima  meet next week to bring on GO principals
+   -
+
+   Finding out the goals and reviewing which will map on.
+   -
+
+   Diana Sherman - put together list of everything we are doing everywhere
+
+
+Sondra:
+
+   -
+
+   Planning session to decide how to set priorities for that group of
+   principals
+   -
+
+   What initiatives are already in supporting those priorities and what to
+   prioritize and deprioritize
+   -
+
+   Meeting with finance side to map process to the GFOA
+   -
+
+   start the MYP for the 18-19 year this coming spring.
+   -
+
+   adopt the standards and when to apply for the year.
+
+
+Financial:
+
+   -
+
+   Linda - weekly check in, bring it to the team meeting to share what I
+   learned and why we need to do it.  (we are in a bad situation, and this is
+   the shift we need to get out of silos
+   -
+
+   Troy - Meet with Kyla to get executive authority to really get ahead and
+   think about the future.
+
+
+GO:
+
+   -
+
+   Continuing to offer support to all OUSD staff as identified or requested
+
+
+Thanks again for all your hard work!  Please lean on me or Marc if there is
+anything that we can do to help you.
+
+
+
+On Thu, Nov 2, 2017 at 8:52 AM, Leroy Gaines (via Google Drive) <
+drive-shares-noreply@google.com> wrote:
+
+> Leroy Gaines <leroy.gaines@ousd.org> has invited you to *contribute to*
+> the following shared folder:
+> GFOA 2017
+> <https://drive.google.com/drive/folders/0B330R_1JnvqudEY0Smt0aDB0aGc?usp=sharing_eil&ts=59fb3f25>
+> [image: Sender's profile photo]I created a GFOA folder that we can use to
+> share notes from the different break out sessions and tools we receive.
+>
+> Best,
+> Leroy
+> Open
+> <https://drive.google.com/drive/folders/0B330R_1JnvqudEY0Smt0aDB0aGc?usp=sharing_eip&ts=59fb3f25>
+> Google Drive: Have all your files within reach from any device.
+> Google Inc. 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+> <https://maps.google.com/?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043,+USA&entry=gmail&source=g> [image:
+> Logo for Google Drive] <https://drive.google.com>
+>
+
+
+
+--
+
+Nima Tahai
+
+Director of Educator Leadership
+
+GO Public Schools Oakland
+
+GO Public Schools Advocates Oakland
+
+Office: (510) 868-8800 | Cell: 510-502-9915
+
+134 Linden Street Oakland, CA 94607
+
+www.gopublicschoolsoakland.org <http://www.gopublicschools.org/>
+
+
+
+Become a GO Advocate. Give Monthly.
+<https://www.classy.org/campaign/go-oakland-advocates-membership-campaign/c132923>
+
+
+
+<https://www.facebook.com/gopublicschools>
+<https://twitter.com/gopublicschools>
+<https://www.youtube.com/channel/UCrixN3WawBymWBABRNaasdQ>
+
+--089e082d2ce4356e1d055d6da644
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Team Oakland GFOA,<div><br></div><div>I hope that every=
+one has had a great start to your week and that this e-mail finds you all d=
+oing well.=C2=A0 I wanted to send out a follow-up e-mail from our time toge=
+ther at GFOA last week - and to echo all of the appreciations that were sha=
+red Friday afternoon.=C2=A0 While we have work ahead to do - it gives me gr=
+eat confidence that this team shared a powerful experience last week that w=
+ill help make Oakland a better district.=C2=A0 In three years when we win a=
+n award from GFOA for our work in finance, this team can fondly reflect bac=
+k on the first week of November 2017 and know that we all did our part to h=
+elp make that happen.=C2=A0 :)</div><div><br></div><div><b>Whole Group Next=
+ steps:</b></div><div><ul><li>Below you will find a link to a folder that L=
+eroy created for us during the conference.=C2=A0 This includes notes from s=
+essions - and an Oakland folder that included our first day whip around on =
+why we are here and our last day debrief with next steps.</li><li>Be on the=
+ look out for an invite from Shanthi for a day in early January for this gr=
+oup to get back together to share out what we have accomplished since Novem=
+ber and to make our next round of commitments for next steps to adopt the G=
+FOA framework</li></ul><div><b>Individual Next Steps (from our debrief on F=
+riday 11/3):</b></div><div><span style=3D"font-weight:bold;font-size:12.8px=
+"><br></span></div><div><span id=3D"gmail-docs-internal-guid-5e068027-9857-=
+03be-2132-5951592e10de"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top=
+:0pt;margin-bottom:0pt"><span style=3D"font-family:Arial;background-color:t=
+ransparent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">Bo=
+ard:</span></p><ul style=3D"margin-top:0pt;margin-bottom:0pt"><li dir=3D"lt=
+r" style=3D"list-style-type:disc;font-family:Arial;background-color:transpa=
+rent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;marg=
+in-top:0pt;margin-bottom:0pt"><span style=3D"background-color:transparent;v=
+ertical-align:baseline;white-space:pre-wrap">pass the balanced budget polic=
+y; long-term planning policies, set work plan for the spring,</span></p></l=
+i><li dir=3D"ltr" style=3D"list-style-type:disc;font-family:Arial;backgroun=
+d-color:transparent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-h=
+eight:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"background-colo=
+r:transparent;vertical-align:baseline;white-space:pre-wrap">educate board a=
+nd get board buy in</span></p></li><li dir=3D"ltr" style=3D"list-style-type=
+:disc;font-family:Arial;background-color:transparent;vertical-align:baselin=
+e"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0p=
+t"><span style=3D"background-color:transparent;vertical-align:baseline;whit=
+e-space:pre-wrap">passing resolution to make sure strategic process is coup=
+led with </span></p></li><li dir=3D"ltr" style=3D"list-style-type:disc;font=
+-family:Arial;background-color:transparent;vertical-align:baseline"><p dir=
+=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span =
+style=3D"background-color:transparent;vertical-align:baseline;white-space:p=
+re-wrap">support budget analysts position funded and build buy in.</span></=
+p></li></ul><br><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;mar=
+gin-bottom:0pt"><span style=3D"font-family:Arial;background-color:transpare=
+nt;font-weight:700;vertical-align:baseline;white-space:pre-wrap">Academic:<=
+/span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bo=
+ttom:0pt"><span style=3D"font-family:Arial;background-color:transparent;fon=
+t-weight:700;vertical-align:baseline;white-space:pre-wrap">Principals:</spa=
+n></p><ul style=3D"margin-top:0pt;margin-bottom:0pt"><li dir=3D"ltr" style=
+=3D"list-style-type:disc;font-family:Arial;background-color:transparent;ver=
+tical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"background-color:transparent;vertical-=
+align:baseline;white-space:pre-wrap">Matin, Leroy, and nima =C2=A0meet next=
+ week to bring on GO principals</span></p></li><li dir=3D"ltr" style=3D"lis=
+t-style-type:disc;font-family:Arial;background-color:transparent;vertical-a=
+lign:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;marg=
+in-bottom:0pt"><span style=3D"background-color:transparent;vertical-align:b=
+aseline;white-space:pre-wrap">Finding out the goals and reviewing which wil=
+l map on.</span></p></li><li dir=3D"ltr" style=3D"list-style-type:disc;font=
+-family:Arial;background-color:transparent;vertical-align:baseline"><p dir=
+=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span =
+style=3D"background-color:transparent;vertical-align:baseline;white-space:p=
+re-wrap">Diana Sherman - put together list of everything we are doing every=
+where</span></p></li></ul><br><p dir=3D"ltr" style=3D"line-height:1.38;marg=
+in-top:0pt;margin-bottom:0pt"><span style=3D"font-family:Arial;background-c=
+olor:transparent;font-weight:700;vertical-align:baseline;white-space:pre-wr=
+ap">Sondra:</span></p><ul style=3D"margin-top:0pt;margin-bottom:0pt"><li di=
+r=3D"ltr" style=3D"list-style-type:disc;font-family:Arial;background-color:=
+transparent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1.=
+38;margin-top:0pt;margin-bottom:0pt"><span style=3D"background-color:transp=
+arent;vertical-align:baseline;white-space:pre-wrap">Planning session to dec=
+ide how to set priorities for that group of principals</span></p></li><li d=
+ir=3D"ltr" style=3D"list-style-type:disc;font-family:Arial;background-color=
+:transparent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1=
+.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"background-color:trans=
+parent;vertical-align:baseline;white-space:pre-wrap">What initiatives are a=
+lready in supporting those priorities and what to prioritize and deprioriti=
+ze</span></p></li><li dir=3D"ltr" style=3D"list-style-type:disc;font-family=
+:Arial;background-color:transparent;vertical-align:baseline"><p dir=3D"ltr"=
+ style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D=
+"background-color:transparent;vertical-align:baseline;white-space:pre-wrap"=
+>Meeting with finance side to map process to the GFOA</span></p></li><li di=
+r=3D"ltr" style=3D"list-style-type:disc;font-family:Arial;background-color:=
+transparent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1.=
+38;margin-top:0pt;margin-bottom:0pt"><span style=3D"background-color:transp=
+arent;vertical-align:baseline;white-space:pre-wrap">start the MYP for the 1=
+8-19 year this coming spring.</span></p></li><li dir=3D"ltr" style=3D"list-=
+style-type:disc;font-family:Arial;background-color:transparent;vertical-ali=
+gn:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin=
+-bottom:0pt"><span style=3D"background-color:transparent;vertical-align:bas=
+eline;white-space:pre-wrap">adopt the standards and when to apply for the y=
+ear.</span></p></li></ul><br><p dir=3D"ltr" style=3D"line-height:1.38;margi=
+n-top:0pt;margin-bottom:0pt"><span style=3D"font-family:Arial;background-co=
+lor:transparent;font-weight:700;vertical-align:baseline;white-space:pre-wra=
+p">Financial:</span></p><ul style=3D"margin-top:0pt;margin-bottom:0pt"><li =
+dir=3D"ltr" style=3D"list-style-type:disc;font-family:Arial;background-colo=
+r:transparent;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:=
+1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"background-color:tran=
+sparent;vertical-align:baseline;white-space:pre-wrap">Linda - weekly check =
+in, bring it to the team meeting to share what I learned and why we need to=
+ do it. =C2=A0(we are in a bad situation, and this is the shift we need to =
+get out of silos</span></p></li><li dir=3D"ltr" style=3D"list-style-type:di=
+sc;font-family:Arial;background-color:transparent;vertical-align:baseline">=
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt">=
+<span style=3D"background-color:transparent;vertical-align:baseline;white-s=
+pace:pre-wrap">Troy - Meet with Kyla to get executive authority to really g=
+et ahead and think about the future.</span></p></li></ul><br><p dir=3D"ltr"=
+ style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D=
+"font-family:Arial;background-color:transparent;font-weight:700;vertical-al=
+ign:baseline;white-space:pre-wrap">GO:</span></p><ul style=3D"margin-top:0p=
+t;margin-bottom:0pt"><li dir=3D"ltr" style=3D"list-style-type:disc;font-fam=
+ily:Arial;background-color:transparent;vertical-align:baseline"><p dir=3D"l=
+tr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"background-color:transparent;vertical-align:baseline;white-space:pre-wr=
+ap">Continuing to offer support to all OUSD staff as identified or requeste=
+d</span></p></li></ul></span></div></div><div><br></div><div>Thanks again f=
+or all your hard work!=C2=A0 Please lean on me or Marc if there is anything=
+ that we can do to help you.</div><div><br></div><div><br></div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Nov 2, 2017 at 8:52=
+ AM, Leroy Gaines (via Google Drive) <span dir=3D"ltr">&lt;<a href=3D"mailt=
+o:drive-shares-noreply@google.com" target=3D"_blank">drive-shares-noreply@g=
+oogle.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex"><div><div style=3D"width:100%;padding:24px 0px 16px;background-c=
+olor:rgb(245,245,245);text-align:center"><div style=3D"display:inline-block=
+;width:90%;max-width:680px;min-width:280px;text-align:left;font-family:Robo=
+to,Arial,Helvetica,sans-serif"><div style=3D"height:0px" dir=3D"ltr"></div>=
+<div style=3D"display:block;padding:0px 2px"><div style=3D"display:block;ba=
+ckground:rgb(255,255,255);height:2px"></div></div><div style=3D"border-left=
+:1px solid rgb(240,240,240);border-right:1px solid rgb(240,240,240)"><div s=
+tyle=3D"padding:24px 32px;background:rgb(255,255,255);border-right:1px soli=
+d rgb(234,234,234);border-left:1px solid rgb(234,234,234)" dir=3D"ltr"><div=
+ style=3D"font-size:14px;line-height:18px;color:rgb(68,68,68)"><a href=3D"m=
+ailto:leroy.gaines@ousd.org" style=3D"color:inherit;text-decoration:none" t=
+arget=3D"_blank">Leroy Gaines</a> has invited you to <b>contribute to</b> t=
+he following shared folder:</div><div style=3D"height:10px"></div><div styl=
+e=3D"font-size:18px;display:table"><div style=3D"display:table-row;border-b=
+ottom:4px solid rgb(255,255,255)"><span style=3D"display:table-cell"><div s=
+tyle=3D"height:32px"><img src=3D"https://ssl.gstatic.com/docs/documents/sha=
+re/images/services/folder-3.png" style=3D"vertical-align: middle; max-width=
+: 24px;"></div></span><span style=3D"display:table-cell;padding-left:12px">=
+<a href=3D"https://drive.google.com/drive/folders/0B330R_1JnvqudEY0Smt0aDB0=
+aGc?usp=3Dsharing_eil&amp;ts=3D59fb3f25" style=3D"color:rgb(51,103,214);tex=
+t-decoration:none;vertical-align:middle" target=3D"_blank">GFOA 2017</a><di=
+v></div></span></div></div><div style=3D"height:16px"></div><div style=3D"h=
+eight:1px;background-color:rgb(238,238,238)"></div><div style=3D"height:24p=
+x"></div><div style=3D"display:table-row"><img style=3D"display: table-cell=
+;" width=3D"50" src=3D"https://drive.google.com/c/u/0/photos/public/AIbEiAI=
+AAABDCL2twLb3mtS3ISILdmNhcmRfcGhvdG8qKDk5ZjIxNGFjN2FlM2ExMmVjYzhmMDQzMmUxZj=
+lmZTBlNTExZjg5MmQwAR5-kgObSjSrLRGQjlxe2A9KCPeT" alt=3D"Sender&#39;s profile=
+ photo"><span style=3D"display:table-cell;vertical-align:top;padding-left:1=
+6px;font-size:13px;line-height:18px;max-width:496px;color:rgb(38,38,38)">I =
+created a GFOA folder that we can use to share notes from the different bre=
+ak out sessions and tools we receive.  <br><br>Best, <br>Leroy </span></div=
+><div style=3D"height:32px"></div><div><a href=3D"https://drive.google.com/=
+drive/folders/0B330R_1JnvqudEY0Smt0aDB0aGc?usp=3Dsharing_eip&amp;ts=3D59fb3=
+f25" style=3D"background-color:rgb(77,144,254);border:1px solid rgb(48,121,=
+237);border-radius:2px;color:white;display:inline-block;font-family:Roboto,=
+Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;height:29px;line=
+-height:29px;min-width:54px;outline:0px;padding:0px 8px;text-align:center;t=
+ext-decoration:none" target=3D"_blank">Open</a></div></div></div><table sty=
+le=3D"width:100%;border-collapse:collapse"><tbody><tr><td style=3D"padding:=
+0px"><table style=3D"border-collapse:collapse;width:3px"><tbody><tr height=
+=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><td w=
+idth=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" b=
+gcolor=3D"#e5e5e5" style=3D"padding:0px"></td></tr><tr height=3D"1"><td wid=
+th=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><td width=3D"1" bgc=
+olor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eae=
+aea" style=3D"padding:0px"></td></tr><tr height=3D"1"><td width=3D"1" bgcol=
+or=3D"#f5f5f5" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f=
+0" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"=
+padding:0px"></td></tr></tbody></table></td><td style=3D"width:100%;padding=
+:0px"><div style=3D"height:1px;width:auto;border-top:1px solid rgb(221,221,=
+221);background:rgb(234,234,234);border-bottom:1px solid rgb(240,240,240)">=
+</div></td><td style=3D"padding:0px"><table style=3D"border-collapse:collap=
+se;width:3px"><tbody><tr height=3D"1"><td width=3D"1" bgcolor=3D"#e5e5e5" s=
+tyle=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padd=
+ing:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></t=
+d></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"paddin=
+g:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></td>=
+<td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td></tr><tr hei=
+ght=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><t=
+d width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><td width=3D"1=
+" bgcolor=3D"#f5f5f5" style=3D"padding:0px"></td></tr></tbody></table></td>=
+</tr></tbody></table><table style=3D"padding:14px 10px 0px" dir=3D"ltr"><tb=
+ody><tr><td style=3D"width:100%;font-size:11px;font-family:Roboto,Arial,Hel=
+vetica,sans-serif;color:rgb(100,100,100);line-height:20px;min-height:40px;v=
+ertical-align:middle">Google Drive: Have all your files within reach from a=
+ny device. <br>Google Inc. <a href=3D"https://maps.google.com/?q=3D1600+Amp=
+hitheatre+Parkway,+Mountain+View,+CA+94043,+USA&amp;entry=3Dgmail&amp;sourc=
+e=3Dg">1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</a></td><td =
+style=3D"padding-left:20px;vertical-align:middle"><a href=3D"https://drive.=
+google.com" target=3D"_blank"><img src=3D"https://www.gstatic.com/images/br=
+anding/googlelogo/1x/googlelogo_tm_black54_color_96x40dp.png" width=3D"96" =
+alt=3D"Logo for Google Drive" border=3D"0"></a></td></tr></tbody></table></=
+div></div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- =
+<br><div class=3D"gmail_signature">
+                                               =20
+                                            <p dir=3D"ltr" style=3D"line-he=
+ight:1.44;margin-top:0pt;margin-bottom:0pt;background-color:rgb(255,255,255=
+)"><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;;colo=
+r:rgb(0,0,0);background-color:rgb(255,255,255);font-weight:400;font-style:n=
+ormal;font-variant-ligatures:normal;font-variant-caps:normal;text-decoratio=
+n:none;vertical-align:baseline;white-space:pre-wrap">Nima Tahai</span></p><=
+p dir=3D"ltr" style=3D"line-height:1.2;margin-top:0pt;margin-bottom:0pt;bac=
+kground-color:rgb(255,255,255)"><span style=3D"font-size:9pt;font-family:&q=
+uot;Century Gothic&quot;;color:rgb(34,34,34);background-color:transparent;f=
+ont-weight:400;font-style:normal;font-variant-ligatures:normal;font-variant=
+-caps:normal;text-decoration:none;vertical-align:baseline;white-space:pre-w=
+rap">Director of Educator Leadership</span></p><p dir=3D"ltr" style=3D"line=
+-height:1.2;margin-top:0pt;margin-bottom:0pt;background-color:rgb(255,255,2=
+55)"><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;;co=
+lor:rgb(244,189,76);background-color:transparent;font-weight:700;font-style=
+:normal;font-variant-ligatures:normal;font-variant-caps:normal;text-decorat=
+ion:none;vertical-align:baseline;white-space:pre-wrap">GO Public Schools Oa=
+kland</span></p><p dir=3D"ltr" style=3D"line-height:1.2;margin-top:0pt;marg=
+in-bottom:0pt;background-color:rgb(255,255,255)"><span style=3D"font-size:9=
+pt;font-family:&quot;Century Gothic&quot;;color:rgb(167,204,74);background-=
+color:transparent;font-weight:700;font-style:normal;font-variant-ligatures:=
+normal;font-variant-caps:normal;text-decoration:none;vertical-align:baselin=
+e;white-space:pre-wrap">GO Public Schools Advocates Oakland</span></p><p di=
+r=3D"ltr" style=3D"line-height:1.2;margin-top:0pt;margin-bottom:0pt;backgro=
+und-color:rgb(255,255,255)"><span style=3D"font-size:9pt;font-family:&quot;=
+Century Gothic&quot;;color:rgb(34,34,34);background-color:transparent;font-=
+weight:400;font-style:normal;font-variant-ligatures:normal;font-variant-cap=
+s:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap"=
+>Office: (510) 868-8800 | Cell: </span><span style=3D"font-family:&quot;Cen=
+tury Gothic&quot;;font-size:9pt;white-space:pre-wrap">510-502-9915</span></=
+p><p dir=3D"ltr" style=3D"line-height:1.2;margin-top:0pt;margin-bottom:0pt;=
+background-color:rgb(255,255,255)"><span style=3D"font-size:9pt;font-family=
+:&quot;Century Gothic&quot;;color:rgb(34,34,34);background-color:transparen=
+t;font-weight:400;font-style:normal;font-variant-ligatures:normal;font-vari=
+ant-caps:normal;text-decoration:none;vertical-align:baseline;white-space:pr=
+e-wrap">134 Linden Street Oakland, CA 94607</span></p><p dir=3D"ltr" style=
+=3D"line-height:1.2;margin-top:0pt;margin-bottom:0pt;background-color:rgb(2=
+55,255,255)"><a href=3D"http://www.gopublicschools.org/" style=3D"text-deco=
+ration:none" target=3D"_blank"><span style=3D"font-size:9pt;font-family:&qu=
+ot;Century Gothic&quot;;color:rgb(17,85,204);background-color:transparent;f=
+ont-weight:400;font-style:normal;font-variant-ligatures:normal;font-variant=
+-caps:normal;text-decoration:underline;vertical-align:baseline;white-space:=
+pre-wrap">www.gopublicschoolsoakland.org</span></a><span style=3D"font-size=
+:9pt;font-family:&quot;Century Gothic&quot;;color:rgb(34,34,34);background-=
+color:transparent;font-weight:400;font-style:normal;font-variant-ligatures:=
+normal;font-variant-caps:normal;text-decoration:none;vertical-align:baselin=
+e;white-space:pre-wrap"> </span></p><p dir=3D"ltr" style=3D"line-height:1.2=
+;margin-top:0pt;margin-bottom:0pt;background-color:rgb(255,255,255)">=C2=A0=
+</p><p dir=3D"ltr" style=3D"line-height:1.2;margin-top:0pt;margin-bottom:0p=
+t;background-color:rgb(255,255,255)"><a href=3D"https://www.classy.org/camp=
+aign/go-oakland-advocates-membership-campaign/c132923" style=3D"text-decora=
+tion:none" target=3D"_blank"><span style=3D"font-size:9pt;font-family:&quot=
+;Century Gothic&quot;;color:rgb(17,85,204);background-color:transparent;fon=
+t-weight:700;font-style:normal;font-variant-ligatures:normal;font-variant-c=
+aps:normal;text-decoration:underline;vertical-align:baseline;white-space:pr=
+e-wrap">Become a GO Advocate. Give Monthly.</span></a></p><p dir=3D"ltr" st=
+yle=3D"line-height:1.2;margin-top:0pt;margin-bottom:0pt;background-color:rg=
+b(255,255,255)">=C2=A0</p><p style=3D"font-size:24px;text-transform:lowerca=
+se;color:rgb(47,50,48)"><span><a href=3D"https://www.facebook.com/gopublics=
+chools" target=3D"_blank"><span style=3D"font-size:9pt;font-family:&quot;Ce=
+ntury Gothic&quot;;color:rgb(17,85,204);background-color:transparent;vertic=
+al-align:baseline;white-space:pre-wrap"><img src=3D"https://lh6.googleuserc=
+ontent.com/n2b6B7UloNdCvY6AKKd5Mn0OYSmiLFxSBVGMjuGnn4eg8vsGRCCI6s6Z8qztdcKS=
+xCu8dQNlg8WZ4wR-eqh9CR9nquKnFSMYM-sBVCR0xPborn9YEXwX7UdHDRvVL-X-o9WMREul" w=
+idth=3D"31" height=3D"31" style=3D"border-width: initial; border-style: non=
+e;"></span></a><a href=3D"https://twitter.com/gopublicschools" target=3D"_b=
+lank"><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;;c=
+olor:rgb(17,85,204);background-color:transparent;vertical-align:baseline;wh=
+ite-space:pre-wrap"><img src=3D"https://lh4.googleusercontent.com/39P5MJFKq=
+XJypDMIittXT1HSAhwl_M-0DEN5x9hxywio9YBe4ESj-SXzMd2m27lUnb7tvEmIZvZKBXFHyVbi=
+1_w2qtiMA7t_5ALO_h17ZygKUXKjaruhx8OdXd5Nvub5cEcVK-7G" width=3D"31" height=
+=3D"31" style=3D"border-width: initial; border-style: none;"></span></a><a =
+href=3D"https://www.youtube.com/channel/UCrixN3WawBymWBABRNaasdQ" target=3D=
+"_blank"><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot=
+;;color:rgb(17,85,204);background-color:transparent;vertical-align:baseline=
+;white-space:pre-wrap"><img src=3D"https://lh4.googleusercontent.com/T25d8b=
+R4v3K_xNmvlYB651iTO4Ng902QTZR6jp4Tf7zPa7uq4985iLbeyR4lvZ7SPigEJhotEUn7G_1x_=
+3F-ihAXevGgYYg3PYqIAN-h53AkW04DGgw6hHIuoKCko4C0oMsPaOy0" width=3D"31" heigh=
+t=3D"31" style=3D"border-width: initial; border-style: none;"></span></a></=
+span><br></p>
+                                        </div>
+</div><span></span></div>
+
+--089e082d2ce4356e1d055d6da644--
